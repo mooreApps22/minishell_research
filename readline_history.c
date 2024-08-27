@@ -5,7 +5,7 @@
 # include <stdbool.h>
 
 // void add_history(const char *prompt);
-// cc readline.c -lreadline
+// cc readline_history.c -lreadline
 
 int	main(int ac, char **av)
 {
