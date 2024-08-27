@@ -6,12 +6,12 @@
 
 Libft authorized: Yes
 External Functs.:
-	readline
-	rl_clear_history
+	✔️readline
+	✔️rl_clear_history
 	rl_on_new_line
 	rl_replace_line
 	rl_redisplay
-	add_history
+	✔️add_history
 	printf
 	malloc/free
 	write
