@@ -24,12 +24,12 @@ External Functs.:
 	✔️ waitpid
 	✔️ wait3
 	wait4
-	signal
+	✔️ signal
 	sigaction
 	sigemptyset
 	sigaddset
 	kill
-	exit
+	✔️ exit
 	getcwd
 	chdir
 	stat
