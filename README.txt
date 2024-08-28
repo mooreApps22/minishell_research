@@ -16,9 +16,9 @@ External Functs.:
 	✔️ malloc/free
 	✔️ write
 	✔️ access
-	open
+	✔️ open
 	read
-	close
+	✔️ close
 	fork
 	wait
 	waitpid
