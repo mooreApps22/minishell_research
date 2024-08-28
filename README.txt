@@ -108,4 +108,6 @@ Shell Requirments:
 		- You're code cannot have memory leaks.
 	Stick to the requirements don't worry about any not required
 		- take bash as a reference
-	
+Resources:
+
+http://hpux.connect.org.uk/hppd/hpux/Gnu/readline-8.2.13/
