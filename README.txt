@@ -12,9 +12,9 @@ External Functs.:
 	✔️ rl_replace_line
 	✔️ rl_redisplay
 	✔️ add_history
-	printf
-	malloc/free
-	write
+	✔️ printf
+	✔️ malloc/free
+	✔️ write
 	access
 	open
 	read
