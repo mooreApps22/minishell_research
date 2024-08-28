@@ -20,7 +20,7 @@ External Functs.:
 	✔️ read
 	✔️ close
 	✔️ fork
-	wait
+	✔️ wait
 	waitpid
 	wait3
 	wait4
