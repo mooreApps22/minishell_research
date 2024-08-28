@@ -17,7 +17,7 @@ External Functs.:
 	✔️ write
 	✔️ access
 	✔️ open
-	read
+	✔️ read
 	✔️ close
 	fork
 	wait
