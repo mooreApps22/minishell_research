@@ -111,3 +111,5 @@ Shell Requirments:
 Resources:
 
 http://hpux.connect.org.uk/hppd/hpux/Gnu/readline-8.2.13/
+
+https://www.linux-magazine.com/Issues/2020/232/Between-the-Lines
