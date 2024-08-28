@@ -22,7 +22,7 @@ External Functs.:
 	✔️ fork
 	✔️ wait
 	✔️ waitpid
-	wait3
+	✔️ wait3
 	wait4
 	signal
 	sigaction
