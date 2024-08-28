@@ -15,7 +15,7 @@ External Functs.:
 	✔️ printf
 	✔️ malloc/free
 	✔️ write
-	access
+	✔️ access
 	open
 	read
 	close
