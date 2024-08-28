@@ -21,7 +21,7 @@ External Functs.:
 	✔️ close
 	✔️ fork
 	✔️ wait
-	waitpid
+	✔️ waitpid
 	wait3
 	wait4
 	signal
