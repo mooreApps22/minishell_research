@@ -19,7 +19,7 @@ External Functs.:
 	✔️ open
 	✔️ read
 	✔️ close
-	fork
+	✔️ fork
 	wait
 	waitpid
 	wait3
