@@ -32,7 +32,7 @@ External Functs.:
 	✔️ exit
 	✔️ getcwd
 	✔️ chdir
-	stat
+	✔️ stat
 	lstat
 	fstat
 	unlink
