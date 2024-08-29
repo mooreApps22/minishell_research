@@ -13,7 +13,7 @@ int	main(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		if (chdir(av[1]) == 0)
+		if (chdir(av[1]) == 0) // make sure the directory exists
 		{
 			while (1)
 			{
