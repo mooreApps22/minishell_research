@@ -30,7 +30,7 @@ External Functs.:
 	sigaddset
 	kill
 	✔️ exit
-	getcwd
+	✔️ getcwd
 	chdir
 	stat
 	lstat
