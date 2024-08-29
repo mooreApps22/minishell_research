@@ -3,7 +3,7 @@
 #include <sys/wait.h>
 
 // pid_t	fork(void);
-// pid_t wait(int *stat_loc);
+// pid_t 	wait(int *stat_loc);
 
 int	main(int ac, char **av)
 {
