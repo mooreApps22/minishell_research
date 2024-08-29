@@ -23,7 +23,7 @@ External Functs.:
 	✔️ wait
 	✔️ waitpid
 	✔️ wait3
-	wait4
+	✔️ wait4
 	✔️ signal
 	sigaction
 	sigemptyset
