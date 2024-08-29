@@ -4,6 +4,9 @@
 #include <string.h>
 #include <stdio.h>
 
+// int access(const char *pathname, int mode);
+// Modes: R_OK, W_OK, X_OK, F_OK (Read, Write, Execute, File)
+
 int main(int ac, char **av)
 {
 	if (strcmp("check_readable", av[1]) == 0)
