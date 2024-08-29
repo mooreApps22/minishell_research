@@ -2,6 +2,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+// void exit(int status);
+// status: EXIT_SUCCESS = 0, EXIT_FAILURE = 1
 // you have to use the -lreadline flag when you compile
 
 int	main(int ac, char **av)
