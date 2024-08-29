@@ -117,3 +117,5 @@ https://www.linux-magazine.com/Issues/2020/232/Between-the-Lines
 https://www.gnu.org/software/libc/manual/html_node/Resource-Usage.html
 
 https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_lib_ref/s/sigaction_struct.html#:~:text=The%20sigaction%20structure%20specifies%20how,or%20action%20for%20nonqueued%20signals.
+
+https://www.mkssoftware.com/docs/man5/siginfo_t.5.asp
