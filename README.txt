@@ -31,7 +31,7 @@ External Functs.:
 	kill
 	✔️ exit
 	✔️ getcwd
-	chdir
+	✔️ chdir
 	stat
 	lstat
 	fstat
