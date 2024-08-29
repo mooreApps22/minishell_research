@@ -1,4 +1,4 @@
-#Minishell# 🐚
+#Minishell 🐚
 ##Creating a simple shell 🐚
 ###Processes and file descriptors
 
@@ -25,8 +25,8 @@ External Functs.:
 	✔️ wait3
 	✔️ wait4
 	✔️ signal
-	sigaction
-	sigemptyset
+	✔️ sigaction
+	✔️ sigemptyset
 	sigaddset
 	kill
 	✔️ exit
