@@ -59,5 +59,6 @@ int	main(int ac, char **av)
 	}
 	else
 		printf("Error\n");
+	free(buf);
 	return (0);
 }
