@@ -1,9 +1,6 @@
 # Minishell 🐚
 ## Creating a simple shell 🐚
 ### Processes and file descriptors
-
-# Mandatory part
-
 ## Libft authorized: Yes
 ## External Functs.:
 	✔️ readline
