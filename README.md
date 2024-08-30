@@ -2,10 +2,10 @@
 ## Creating a simple shell 🐚
 ### Processes and file descriptors
 
-#Mandatory part
+# Mandatory part
 
-Libft authorized: Yes
-External Functs.:
+## Libft authorized: Yes
+## External Functs.:
 	✔️ readline
 	✔️ rl_clear_history
 	✔️ rl_on_new_line
@@ -60,7 +60,7 @@ External Functs.:
 	tputs
 
 
-Shell Requirments:
+## Shell Requirments:
 
 	display a PROMPT when waitng for a new commmand
 	have working history
@@ -108,7 +108,7 @@ Shell Requirments:
 		- You're code cannot have memory leaks.
 	Stick to the requirements don't worry about any not required
 		- take bash as a reference
-Resources:
+## Resources:
 
 http://hpux.connect.org.uk/hppd/hpux/Gnu/readline-8.2.13/
 
