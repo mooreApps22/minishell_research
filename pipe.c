@@ -16,6 +16,14 @@
 		the point is to read data from process 1 && write that data to process 2
 
 		return 0 on success and -1 on failure (errno is set)
+
+		NOTE: there are three main methods for printing from a child process
+			
+			1) if you use printf() you must use a '\n' or the buffer will not be flushed
+
+			2) or you can you write() w/ STDOUT_FILENO
+
+			3) fflush()
 */
 
 void	child_process(int *pipefd, char **av)
@@ -23,7 +31,9 @@ void	child_process(int *pipefd, char **av)
 	dup2(pipefd[1], 0);
 	close(pipefd[0]);
 	printf("PID %d: %s\n", getpid(), av[1]); // will work with '\n'
-//	printf("PID %d: %s", getpid(), av[1]); // will NOT work without '\n'
+//	printf("PID %d: %s", getpid(), av[1]); // will work with '\n'
+//	printf("\n");
+//	write(STDOUT_FILENO, av[1], strlen(av[1]));
 	close(pipefd[0]);
 	_exit(EXIT_SUCCESS);
 }
@@ -46,5 +56,5 @@ int	main(int ac, char **av)
 	}
 	else
 		printf("Enter 1 argument, no more, no less");
-//	waitpid(child_pid, NULL, 0);
+	return (0);
 }
