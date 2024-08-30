@@ -28,7 +28,7 @@ External Functs.:
 	✔️ sigaction
 	✔️ sigemptyset
 	sigaddset
-	kill
+	✔️ kill
 	✔️ exit
 	✔️ getcwd
 	✔️ chdir
