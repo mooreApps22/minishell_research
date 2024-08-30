@@ -34,7 +34,7 @@
 	✔️ fstat
 	✔️ unlink
 	✔️ execve
-	dup
+	✔️ dup
 	dup2
 	pipe
 	opendir
