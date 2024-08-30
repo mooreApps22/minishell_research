@@ -36,7 +36,7 @@
 	✔️ execve
 	✔️ dup
 	✔️ dup2
-	pipe
+	✔️ pipe
 	opendir
 	readdir
 	closedir
