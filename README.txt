@@ -1,6 +1,6 @@
-#Minishell 🐚
-##Creating a simple shell 🐚
-###Processes and file descriptors
+# Minishell 🐚
+## Creating a simple shell 🐚
+### Processes and file descriptors
 
 #Mandatory part
 
