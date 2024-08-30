@@ -32,7 +32,7 @@
 	✔️ stat
 	✔️ lstat
 	✔️ fstat
-	unlink
+	✔️ unlink
 	execve
 	dup
 	dup2
