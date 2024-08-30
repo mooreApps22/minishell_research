@@ -24,7 +24,7 @@
 	✔️ signal
 	✔️ sigaction
 	✔️ sigemptyset
-	sigaddset
+	✔️ sigaddset
 	✔️ kill
 	✔️ exit
 	✔️ getcwd
