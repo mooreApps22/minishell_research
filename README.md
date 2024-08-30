@@ -30,7 +30,7 @@
 	✔️ getcwd
 	✔️ chdir
 	✔️ stat
-	lstat
+	✔️ lstat
 	fstat
 	unlink
 	execve
