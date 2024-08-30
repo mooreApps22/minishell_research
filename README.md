@@ -35,7 +35,7 @@
 	✔️ unlink
 	✔️ execve
 	✔️ dup
-	dup2
+	✔️ dup2
 	pipe
 	opendir
 	readdir
