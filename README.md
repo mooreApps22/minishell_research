@@ -33,7 +33,7 @@
 	✔️ lstat
 	✔️ fstat
 	✔️ unlink
-	execve
+	✔️ execve
 	dup
 	dup2
 	pipe
