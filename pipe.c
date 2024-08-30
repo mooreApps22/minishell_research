@@ -22,8 +22,8 @@ void	child_process(int *pipefd, char **av)
 {
 	dup2(pipefd[1], 0);
 	close(pipefd[0]);
-	printf("%s\n", av[1]); // will work with '\n'
-//	printf("%s", av[1]); // will NOT work without '\n'
+	printf("PID %d: %s\n", getpid(), av[1]); // will work with '\n'
+//	printf("PID %d: %s", getpid(), av[1]); // will work with '\n'
 	close(pipefd[0]);
 	_exit(EXIT_SUCCESS);
 }
