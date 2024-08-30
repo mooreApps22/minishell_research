@@ -31,7 +31,7 @@
 	✔️ chdir
 	✔️ stat
 	✔️ lstat
-	fstat
+	✔️ fstat
 	unlink
 	execve
 	dup
