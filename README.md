@@ -118,3 +118,5 @@ https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_lib_ref
 https://www.mkssoftware.com/docs/man5/siginfo_t.5.asp
 
 https://www.codequoi.com/en/sending-and-intercepting-a-signal-in-c/
+
+https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf
