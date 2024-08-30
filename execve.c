@@ -16,7 +16,7 @@
 		cc execve.c
 		./a.out hello_world
 
-  the target of the execve.c is an executable, not the .c file
+  NOTE: the target of the execve.c is an executable, not the .c file
 */
 
 int	main(int ac, char **av, char **envp)
