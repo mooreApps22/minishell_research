@@ -42,9 +42,9 @@
 	✔️ closedir
 	✔️ strerror
 	✔️ perror
-	isatty
-	ttyname
-	ttyslot
+	✔️ isatty
+	✔️ ttyname
+	✔️ ttyslot
 	ioctl
 	getenv
 	tcsetattr
