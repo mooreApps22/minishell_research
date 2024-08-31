@@ -40,7 +40,7 @@
 	✔️ opendir
 	✔️ readdir
 	✔️ closedir
-	strerror
+	✔️ strerror
 	✔️ perror
 	isatty
 	ttyname
