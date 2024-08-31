@@ -37,11 +37,11 @@
 	✔️ dup
 	✔️ dup2
 	✔️ pipe
-	opendir
-	readdir
-	closedir
+	✔️ opendir
+	✔️ readdir
+	✔️ closedir
 	strerror
-	perror
+	✔️ perror
 	isatty
 	ttyname
 	ttyslot
