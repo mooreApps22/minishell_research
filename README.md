@@ -120,3 +120,5 @@ https://www.mkssoftware.com/docs/man5/siginfo_t.5.asp
 https://www.codequoi.com/en/sending-and-intercepting-a-signal-in-c/
 
 https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf
+
+https://docs.huihoo.com/doxygen/linux/kernel/3.7/arch_2alpha_2include_2asm_2termios_8h_source.htm
