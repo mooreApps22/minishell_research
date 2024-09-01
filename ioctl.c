@@ -12,34 +12,32 @@
 		this system call controls parameters of terminals
 
 		returns 0 on sucess and -1 on error (sets errno)
+
+		struct winsize
+		{
+			unsigned short	ws_row;
+			unsigned short	ws_col;
+			unsigned short	ws_xpixel;
+			unsigned short	ws_ypixel;
+		}
 */
 
 int	main(int ac, char **av)
 {
-	int				tty;
-	struct termios	term;
+	struct winsize		ws;
+	int					fd;
 
-	if (ac == 1)
+	fd = STDOUT_FILENO;
+	if (ioctl(fd, TIOCGWINSZ, &ws) == -1)
 	{
-		tty = ttyslot();	
-		if (tty > 0 && isatty(tty))
-		{
-			printf("TTY: %s\n", ttyname(tty));
-			if ((ioctl(tty, TCGETS, &term)) == -1) // for macOS you'll have to use the TIOCGETA macro
-			{
-				perror("ioctl TCGETS");
-				exit(EXIT_FAILURE);
-			}
-			term.c_lflag &= ~ECHO;
-			if ((ioctl(tty, TCGETS, &term)) == -1)
-			{
-				perror("ioctl TCGETS");
-				exit(EXIT_FAILURE);
-			}
-			printf("TTY: %s settings modified successfull.\n", ttyname(tty));
-		}
-		else
-			printf("Not a terminal\n");
+		perror("ioctl");
+		return (EXIT_FAILURE);
 	}
+	printf("___Terminal Size_____________\n");
+	printf("\tRows:\t\t%d\n", ws.ws_row);
+	printf("\tCols:\t\t%d\n", ws.ws_col);
+	printf("\tX Pixels:\t%d\n", ws.ws_xpixel);
+	printf("\tY Pixels:\t%d\n", ws.ws_ypixel);
+	printf("____________________________\n");
 	return (0);	
 }
