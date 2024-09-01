@@ -47,7 +47,7 @@
 	✔️ ttyslot
 	✔️ ioctl
 	✔️ getenv
-	tcsetattr
+	✔️ tcsetattr
 	tcgetattr
 	tgetent
 	tgetflag
