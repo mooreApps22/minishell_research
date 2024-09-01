@@ -20,6 +20,8 @@
 			unsigned short	ws_xpixel;
 			unsigned short	ws_ypixel;
 		}
+
+  	NOTE: There are other struct you can use in the third argument, some are obselete
 */
 
 int	main(int ac, char **av)
