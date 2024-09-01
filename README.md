@@ -1,5 +1,5 @@
 # Minishell 🐚
-## Creating a simple shell 🐚
+## Creating a simple shell 🦪
 ### Processes and file descriptors
 ## Libft authorized: Yes
 ## External Functs.:
