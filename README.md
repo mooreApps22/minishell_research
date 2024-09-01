@@ -46,7 +46,7 @@
 	✔️ ttyname
 	✔️ ttyslot
 	ioctl
-	getenv
+	✔️ getenv
 	tcsetattr
 	tcgetattr
 	tgetent
