@@ -51,7 +51,7 @@
 	✔️ tcgetattr
 	✔️ tgetent
 	tgetflag
-	tgetnum
+	✔️ tgetnum
 	tgetstr
 	tgoto
 	tputs
