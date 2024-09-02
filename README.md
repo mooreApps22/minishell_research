@@ -48,7 +48,7 @@
 	✔️ ioctl
 	✔️ getenv
 	✔️ tcsetattr
-	tcgetattr
+	✔️ tcgetattr
 	tgetent
 	tgetflag
 	tgetnum
