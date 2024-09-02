@@ -49,7 +49,7 @@
 	✔️ getenv
 	✔️ tcsetattr
 	✔️ tcgetattr
-	tgetent
+	✔️ tgetent
 	tgetflag
 	tgetnum
 	tgetstr
