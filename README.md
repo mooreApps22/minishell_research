@@ -55,6 +55,10 @@
 	✔️ tgetstr
 	✔️ tgoto
 	✔️ tputs
+
+- [ ] Item 1
+- [x] Item 2
+- [ ] Item 3
  
 ## Shell Requirments:
  - display a PROMPT when waitng for a new commmand
