@@ -57,8 +57,8 @@
 	✔️ tputs
  
 ## Shell Requirments:
-* display a PROMPT when waitng for a new commmand
- * have working history
+ - display a PROMPT when waitng for a new commmand
+  - have working history
 	search & launch the right executable
 		based on the PATH variable
 		OR using a relative path
