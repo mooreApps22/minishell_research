@@ -50,7 +50,7 @@
 	✔️ tcsetattr
 	✔️ tcgetattr
 	✔️ tgetent
-	tgetflag
+	✔️ tgetflag
 	✔️ tgetnum
 	tgetstr
 	tgoto
