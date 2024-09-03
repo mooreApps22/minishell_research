@@ -26,8 +26,6 @@
 		"hc" (hard_copy)
 		"km" (has_meta_key)
 		"hs" (has_status_line)
-
-	HINT: re-adjust the window size to see different outputs
 */
 
 #define BUFFER_SIZE 1024
