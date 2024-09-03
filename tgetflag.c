@@ -12,7 +12,7 @@
 		return 1 if the capability name is present in the terminal description, 0 if not
 				
 	
-	NOTE:	cc tgetent.c -ltermcap
+	NOTE:	cc tgetflag.c -ltermcap
 			infocmp
 			./a.out xterm
 
