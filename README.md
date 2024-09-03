@@ -124,3 +124,5 @@ https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-Writing
 https://docs.huihoo.com/doxygen/linux/kernel/3.7/arch_2alpha_2include_2asm_2termios_8h_source.htm
 
 https://www.gnu.org/software/termutils/manual/termcap-1.3/html_chapter/termcap_toc.html
+
+https://invisible-island.net/ncurses/man/terminfo.5.html
