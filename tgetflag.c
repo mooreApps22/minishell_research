@@ -1,4 +1,5 @@
 #include <curses.h>
+#include <ncurses.h>
 #include <term.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,20 +13,49 @@
 		return 1 if the capability name is present in the terminal description, 0 if not
 				
 	
-	NOTE:	cc tgetflag.c -ltermcap
+	NOTE:	cc tgetent.c -ltermcap
 			infocmp
 			./a.out xterm
 
-		"am" (auto_right_margin)
-		"bw" (auto_left_margin)
-		"xsb" (no_esc_ctlc)
-		"xhp" (ceol_standout_glitch)
-		"xenl" (eat_newline_glitch)
-		"eo" (erase_overstrike)
-		"gn" (generic_type)
-		"hc" (hard_copy)
-		"km" (has_meta_key)
-		"hs" (has_status_line)
+		"am" (terminal has automatic margins)
+		"bw" (cub1 wraps from column 0 to last column)
+		"xb" (no_esc_ctlc)
+		"xs" (standout not erased by)
+		"xn" (newline ignored after 80 cols)
+		"eo" (can erase overstrikes w/ a blank)
+		"gn" (generic line type)
+		"hc" (hard copy terminal)
+		"km" (has a meta key, sets 8th-bit)
+		"hs" (has extra status line)
+		"in" (insert mode distinguishes null)
+		"da" (display may be retained above)
+		"db" (display may be retained below)
+		"mi" (safe to move while in insert)
+		"ms" (safe to move while in standout)
+		"os" (terminal can overstrike)
+		"es" (escape can be used on the status line)
+		"xt" (tabs destructive, magic so)
+		"hz" (cannot print ~'s (Hazeltine))
+		"ul" (unline character)
+		"xo" (terminal uses xon/xoff)
+		"nx" (padding will not work, xon/xoff required)
+		"5i" (printer will not echo on)
+		"HC" (hard cursor)
+		"NR" (smcup does not reverse rmcup)
+		"NP" (pad character does not exist)
+		"ND" (scrolling region is non-destructive)
+		"cc" (terminal can re-define)
+		"ut" (screen erased w/ background)
+		"hl" (terminal uses only HLS color)
+		"YA" (only positive motion for pha/mhpa caps)
+		"YB" (using cr turns off micro mode)
+		"YC" (printer needs operator to chang character set)
+		"YD" (only positve motion for vpa/mvpa caps)
+		"YE" (printing in last column causes cr)
+		"YF" (changing character pitch)
+		"YG" (changing line pitch changes resolution)
+
+	HINT: re-adjust the window size to see different outputs
 */
 
 #define BUFFER_SIZE 1024
@@ -64,23 +94,77 @@ int main(int ac, char **av)
 void	print_tgetflags(void)
 {
 	if (tgetflag("am"))
-		printf("auto right margin\n");
+		printf("terminal has automatic margins\n");
 	if (tgetflag("bw"))
-		printf("auto left margin\n");
-	if (tgetflag("xsb"))
-		printf("no esc-cntl\n");
-	if (tgetflag("xhp"))
-		printf("ceol standout glitch\n");
-	if (tgetflag("xenl"))
-		printf("eat newline glitch\n");
+		printf("cub1 wraps from column 0 to last column\n");
+	if (tgetflag("xb"))
+		printf("no escape control-C\n");
+	if (tgetflag("xs"))
+		printf("standout not erased by\n");
+	if (tgetflag("xn"))
+		printf("newline ignored after 80 columns\n");
 	if (tgetflag("eo"))
-		printf("erase overstrike\n");
+		printf("can erase overstrikes with a blank\n");
 	if (tgetflag("gn"))
-		printf("generic type\n");
+		printf("generic line type\n");
 	if (tgetflag("hc"))
-		printf("hard copy\n");
+		printf("hard copy terminal\n");
 	if (tgetflag("km"))
-		printf("has meta key\n");
+		printf("has a meta key, sets 8th-bit\n");
 	if (tgetflag("hs"))
-		printf("has status line\n");
+		printf("has extra status line\n");
+	if (tgetflag("in"))
+		printf("insert mode distinguishes null\n");
+	if (tgetflag("da"))
+		printf("display may be retained above\n");
+	if (tgetflag("db"))
+		printf("display may be retained below\n");
+	if (tgetflag("mi"))
+		printf("safe to move while in insert mode\n");
+	if (tgetflag("ms"))
+		printf("safe to move while in standout mode\n");
+	if (tgetflag("os"))
+		printf("terminal can overstrike\n");
+	if (tgetflag("es"))
+		printf("escape can be used on the status line\n");
+	if (tgetflag("xt"))
+		printf("tabs are destructive, magic so\n");
+	if (tgetflag("hz"))
+		printf("cannot print ~'s (Hazeltine)\n");
+	if (tgetflag("ul"))
+		printf("underline character\n");
+	if (tgetflag("xo"))
+		printf("terminal uses XON/XOFF flow control\n");
+	if (tgetflag("nx"))
+		printf("padding will not work, XON/XOFF required\n");
+	if (tgetflag("5i"))
+		printf("printer will not echo on\n");
+	if (tgetflag("HC"))
+		printf("hard cursor\n");
+	if (tgetflag("NR"))
+		printf("smcup does not reverse rmcup\n");
+	if (tgetflag("NP"))
+		printf("pad character does not exist\n");
+	if (tgetflag("ND"))
+		printf("scrolling region is non-destructive\n");
+	if (tgetflag("cc"))
+		printf("terminal can redefine character set\n");
+	if (tgetflag("ut"))
+		printf("screen erased with background\n");
+	if (tgetflag("hl"))
+		printf("terminal uses only HLS color\n");
+	if (tgetflag("YA"))
+		printf("only positive motion for pha/mhpa caps\n");
+	if (tgetflag("YB"))
+		printf("using CR turns off micro mode\n");
+	if (tgetflag("YC"))
+		printf("printer needs operator to change character set\n");
+	if (tgetflag("YD"))
+		printf("only positive motion for vpa/mvpa caps\n");
+	if (tgetflag("YE"))
+		printf("printing in last column causes CR\n");
+	if (tgetflag("YF"))
+		printf("changing character pitch\n");
+	if (tgetflag("YG"))
+		printf("changing line pitch changes resolution\n");
 }
