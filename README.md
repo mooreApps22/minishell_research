@@ -60,7 +60,7 @@
 ## Shell Requirments:
 
 	display a PROMPT when waitng for a new commmand
- <sub> hi(); </sub>
+ <sub>  </sub>
 	have working history
 	search & launch the right executable
 		based on the PATH variable
