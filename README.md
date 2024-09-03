@@ -52,9 +52,9 @@
 	✔️ tgetent
 	✔️ tgetflag
 	✔️ tgetnum
-	tgetstr
-	tgoto
-	tputs
+	✔️ tgetstr
+	✔️ tgoto
+	✔️ tputs
 
 
 ## Shell Requirments:
