@@ -24,7 +24,7 @@
 
 	return value or -1 on not mention in terminal description 
 	
-	NOTE:	cc tgetent.c -ltermcap
+	NOTE:	cc tgetnum.c -ltermcap
 			infocmp
 			./a.out xterm
 
