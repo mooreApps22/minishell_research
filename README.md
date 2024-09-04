@@ -100,6 +100,22 @@ wc -l << EOF
 > things
 > EOF
 ```
+9. Implement **pipes** (|) 
+* Each commands output is the input of the next command
+```
+ls | wc -c | cat
+```
+10. Using **environment variables**
+* For example: $TERM, $PATH, $USER
+* use 'printenv' to see all environment variables
+```
+echo $USER
+```
+11. $? should print the **exit status** of the last executed **foreground** pipeline
+12. Handle **ctrl-C**, **ctrl-D**, and **ctrl-\** the same as bash
+* **ctrl-C** displays a new prompt on a new line
+* **ctrl-D** exits the shell
+* **ctrl-\\** does nothing
 
 ## Resources:
 
