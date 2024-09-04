@@ -115,7 +115,7 @@ echo $USER
 12. Handle **ctrl-C**, **ctrl-D**, and **ctrl-\** the same as bash
 * **ctrl-C** displays a new prompt on a new line
 * **ctrl-D** exits the shell
-* **ctrl-\** does nothing
+* **ctrl-\\** does nothing
 
 ## Resources:
 
