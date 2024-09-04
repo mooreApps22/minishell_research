@@ -112,7 +112,7 @@ ls | wc -c | cat
 echo $USER
 ```
 11. $? should print the **exit status** of the last executed **foreground** pipeline
-12. Handle **ctrl-C**, **ctrl-D**, and **ctrl-\** the same as bash
+12. Handle **ctrl-C**, **ctrl-D**, and **ctrl-\\** the same as bash
 * **ctrl-C** displays a new prompt on a new line
 * **ctrl-D** exits the shell
 * **ctrl-\\** does nothing
