@@ -113,9 +113,11 @@ echo $USER
 ```
 11. $? should print the **exit status** of the last executed **foreground** pipeline
 12. Handle **ctrl-C**, **ctrl-D**, and **ctrl-\\** the same as bash
-* **ctrl-C** displays a new prompt on a new line
-* **ctrl-D** exits the shell
-* **ctrl-\\** does nothing
+* This implies in both interactive and non-interactive modes
+* In interactive mode the ctrl keys should:
+	* **ctrl-C** displays a new prompt on a new line
+	* **ctrl-D** exits the shell
+	* **ctrl-\\** does nothing
 
 ## Resources:
 
