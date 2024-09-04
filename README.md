@@ -118,6 +118,28 @@ echo $USER
 	* **ctrl-C** displays a new prompt on a new line
 	* **ctrl-D** exits the shell
 	* **ctrl-\\** does nothing
+13. The shell must have the following **builtins**: (do not worry about option unless specify)
+* echo -n
+	* diplay a line of text without trailing newline
+* cd <path> (relative or absolute path)
+	* change the working directory
+* pwd
+	* print working directory
+* export
+	* add a variable to environment variables
+```
+export MY_VAR="Hello World"
+env
+echo $MY_VAR
+echo "The value of MY_VAR is: $MY_VAR"
+unset MY_VAR
+```
+* unset
+	* removes a variable from the environment variables
+* env (no arguments)
+	* print all enviroment variables
+* exit
+	* exit the minishell
 
 ## Resources:
 
