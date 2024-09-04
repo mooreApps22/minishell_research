@@ -63,7 +63,7 @@
 	2. Have a working **history**
 	3. Search Relative or Absolute PATH variable for right execuatble and run it
 	4. Use **one global variable** to indicate a received signal
- ```volatile sig_atomic_t	g_signal = 0;```
+ ```c volatile sig_atomic_t	g_signal = 0;```
 	- Ensure signal handler will not access main data structure
 	- Only provides the number of recieved signal
 	5. Not interpret unclosed quotes or metacharacters (unless specified in subject)
