@@ -76,22 +76,22 @@ echo '$'
 ```
 7. A double quote works like a single quote but doesn't work on '$'
 8. Implement **redirections**
-	* **'>' redirects output**
+* **'>' redirects output**
 ```
 date > specs.txt 
 hostname > specs.txt 
 ```
-	* **'>>' append mode**
+* **'>>' append mode**
 ```
 hostname > specs.txt 
 date >> specs.txt 
 ```
-	* **'<' redirects input** 
+* **'<' redirects input** 
 ```
 vim mylist.txt
 sort < mylist.txt
 ```
-	* **'<<' append mode (heredoc)**
+* **'<<' append mode (heredoc)**
 ```
 wc -l << EOF
 > all
