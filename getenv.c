@@ -14,19 +14,20 @@
 
 int	main(int ac, char **av, char **envp)
 {
-	if (ac == 1 || ac == 2)
-	{
-		char	*env;
+	char	*s;
 
-		while ((env = getenv(*envp)) != NULL)
-		{
-			if (ac == 1)
-				printf("%s", env);
-			else if (ac == 2)
-				printf("%s\n", env);
-			envp++;
-		}
+	if (ac == 1)
+	{
+		while (*envp)
+			printf("%s\n", *envp++);
 	}
-	printf("\n");
+	else if (ac == 2)
+	{
+		s = getenv(av[1]);
+		if (s)
+			printf("%s\n", s);
+		else
+			printf("%s not found\n", s);
+	}
 	return (0);	
 }
