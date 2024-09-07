@@ -1,33 +1,31 @@
-#include <unistd.h>
-#include <stdlib.h>
+#include <unistd.h> // contains __environ
 #include <stdio.h>
 
 /*
-	GETENV - get an environment variable
+	EXECVE - execute program
 
-	char	*getenv(const char *name);
+		int execve(const char *path, char *const _Nullable av[], char *const _Nullable envp[])
 
-	return pointer to value in the environment or NULL if no match
+		returns 0 on sucess and -1 on failure
 
-	NOTE: add a Command line argument(any string) to output the environmenvariables separated by a newline
+
+	Setup to use program!!!!!!
+
+	create a simple hello_world.c
+		cc hello_world.c -o hello_world
+		cc execve.c
+		./a.out hello_world
+
+  NOTE: the target of the execve.c is an executable, not the .c file
 */
 
-int	main(int ac, char **av, char **envp)
+int	main(int ac, char **av)
 {
-	char	*s;
-
-	if (ac == 1)
+	if (ac == 2)
 	{
-		while (*envp)
-			printf("%s\n", *envp++);
+		if (execve(av[1], av, __environ))
+			printf("%s: was not found", av[1]);
 	}
-	else if (ac == 2)
-	{
-		s = getenv(av[1]);
-		if (s)
-			printf("%s\n", s);
-		else
-			printf("%s not found\n", s);
-	}
-	return (0);	
+	printf("\n");
+	return (0);
 }
