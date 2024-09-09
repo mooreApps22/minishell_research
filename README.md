@@ -121,6 +121,7 @@ echo $USER
 13. The shell must have the following **builtins**: (do not worry about option unless specify)
 * echo -n
 	* diplay a line of text without trailing newline
+        * ```echo -n a b c $'\n'``` to use the newline 
 * cd <path> (relative or absolute path)
 	* change the working directory
 * pwd
