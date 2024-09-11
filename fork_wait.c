@@ -42,9 +42,12 @@ int	main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 	if (pid)
-		printf("Parent: %d\n", getpid());
+		write(1, "Parent ", 7);
+	//	printf("Parent: %d\n", getpid());
+	write(1, "Both ", 5);
 	if (pid == 0)
-		printf("Child:  %d\n", getpid());
-	wait(&pid);
+		write(1, "Child\n", 6);
+	//	printf("Child:  %d\n", getpid());
+//	wait(&pid);
 	return (0);
 }
