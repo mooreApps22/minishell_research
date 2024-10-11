@@ -29,6 +29,10 @@
 			speed_t c_ispeed; // input  baud rate
 			speed_t c_ospeed; // output baud rate
 		};
+
+  		ECHO 	= Enables echo of input characters
+    		ICANON 	= Enables canonical mode (process line by line)
+      		ISIG 	= Enables signal generation for control character/signals
 */
 
 void	output_terminal_attr(struct termios term);
