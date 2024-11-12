@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <unistd.h> // contains __environ
 #include <stdio.h>
 
 /*
@@ -19,14 +19,12 @@
   NOTE: the target of the execve.c is an executable, not the .c file
 */
 
-int	main(int ac, char **av, char **envp)
+int	main(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		if (execve(av[1], av, envp))
-			printf("%s was found \n", av[1]);
-		else
-			printf("%s was found not\n", av[1]);
+		if (execve(av[1], av, __environ))
+			printf("%s: was not found", av[1]);
 	}
 	printf("\n");
 	return (0);
