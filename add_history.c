@@ -4,8 +4,18 @@
 # include <stdlib.h>
 # include <stdbool.h>
 
-// void add_history(const char *prompt);
-// cc readline_history.c -lreadline
+/*
+
+	ADD_HISTORY - Keeps a history of readline inputs
+
+	void add_history(const char *str);
+
+		Places STR at the end of a the history list
+
+	Necessary Compile Options:
+		cc readline_history.c -lreadline
+
+*/
 
 int	main(int ac, char **av)
 {
@@ -21,7 +31,7 @@ int	main(int ac, char **av)
 			free(input);
 		}
 		else
-			printf("Nope.\n");
+			printf("Error.\n");
 	}
 	return (0);
 }
