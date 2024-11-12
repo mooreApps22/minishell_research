@@ -6,8 +6,30 @@
 # include <stdbool.h>
 # include <unistd.h>
 
-// void	rl_clear_history(void);
-// cc readline.c -lreadline
+/*
+	READLINE UTILITY FUNCTIONS
+
+	void	rl_replace_line(const char *text, int clear_undo);
+		
+		Replaces the readline buffer with TEXT
+
+		If CLEAR_UNDO == non-zero, the undo list is cleared
+
+	void	rl_clear_history(void);
+
+		Clears all saved history
+
+	int		rl_on_new_line(void);
+
+		Tell update functions, there is a newline
+
+	void	rl_redisplay(void);
+
+		Change output to current contents of rl_line_buffer.
+
+	 Necessary Compile Option:
+		 cc readline.c -lreadline
+*/
 
 void	handler(int signal)
 {
