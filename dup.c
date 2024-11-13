@@ -5,21 +5,25 @@
 /*
 	DUP - duplicate a file descriptor
 
-	int dup(int oldfd);
+		int dup(int oldfd);
 
-	returns fd on success and -1 on failure (sets an errno)
+		returns fd on success and -1 on failure (sets an errno)
 
-	NOTE: make sure there is a test.txt in the directory
+	Usage:
+		./a.out <filename>
 */
+
+{
+}
 
 int	main(int ac, char **av)
 {
 	int fd1;	
 	int fd2;	
 
-	fd1 = open("test.txt", O_RDONLY);
+	fd1 = open(av[1], O_RDONLY);
 	fd2 = dup(fd1);
-	if (!fd2)
+	if (fd2 == -1)
 		printf("Didn't open dup fd");
 	else
 		printf("The dup fd was opened");
