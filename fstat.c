@@ -43,7 +43,7 @@ int	main(int ac, char **av)
 		perror("buf didn't malloc");
 		exit(EXIT_FAILURE);
 	}
-	fd = open("test.txt", O_RDONLY);
+	fd = open(av[1], O_RDONLY);
 	if (!fd)
 	{
 		perror("file didn't open");
@@ -51,6 +51,7 @@ int	main(int ac, char **av)
 	}
 	if (fstat(fd, buf) == 0)
 	{
+		printf("File Name:	%s\n", av[1]);
 		printf("Device ID:	%ld\n", buf->st_dev);
 		printf("Inode #:	%ld\n", buf->st_ino);
 		printf("Protection:	%u\n", buf->st_mode);
