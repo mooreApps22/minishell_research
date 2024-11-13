@@ -98,7 +98,7 @@ bool	check_entry(char *entry, char **paths, char *cmd)
 	return (false);
 }
 
-bool	search_dirs(char **paths, char *cmd)
+bool	search_dirs_for_cmd(char **paths, char *cmd)
 {
 	DIR				*dir;
 	struct dirent	*entry;
@@ -128,7 +128,7 @@ int	main(int ac, char **av)
 	paths = get_paths();
 	if (!paths)
 		return (1);
-	if (search_dirs(paths, av[1]))
+	if (search_dirs_for_cmd(paths, av[1]))
 		printf("Found: You can exec %s\n", av[1]);
 	else
 		printf("%s: command not found\n", av[1]);

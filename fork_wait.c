@@ -7,14 +7,14 @@
 
 		pid_t	fork(void);
 
-	on success both Parent and Child processes return a pid_t
+			On success both Parent and Child processes return a pid_t
 	
-	Child returns 0 on success
-	Parent returns a positve, non-zero pid_t on success
+			Child returns 0 on success
+			Parent returns a positve, non-zero pid_t on success
 	
-	on failure the parent return -1 (sets errno)
-		EAGAIN - too many processes running
-		ENOMEN - not enough space 
+		on failure the parent return -1 (sets errno)
+			EAGAIN - too many processes running
+			ENOMEN - not enough space 
 
 	Attributes
 		- child has its own pid
@@ -26,15 +26,20 @@
 		- pending signal are cleared
 		- sigaction mask is inherited
 
-	WAIT - 
+	WAIT - Causes parent execution to haul until any of the childrens'' execution is finish
 
-		pid_t 	wait(int *stat_loc);
+		pid_t 	wait(int *wstatus);
+
+			ex: wait(&wstatus);
+
+			WSTATUS is the 
 
 */
 
 int	main(int ac, char **av)
 {
 	pid_t	pid;
+	int		wstatus;
 
 	if ((pid = fork()) == -1)
 	{
@@ -42,12 +47,16 @@ int	main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 	if (pid)
-		write(1, "Parent ", 7);
-	//	printf("Parent: %d\n", getpid());
-	write(1, "Both ", 5);
+	{
+		write(1, "Parent: ", 7);
+		printf(" can you see me?\n");
+		wait(&wstatus);
+		printf("Finished\n");
+	}
 	if (pid == 0)
-		write(1, "Child\n", 6);
-	//	printf("Child:  %d\n", getpid());
-//	wait(&pid);
+	{
+		write(1, "Child: ", 7);
+		printf("can you hear me?\n");
+	}
 	return (0);
 }
