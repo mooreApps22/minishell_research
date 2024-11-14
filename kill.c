@@ -5,11 +5,11 @@
 #include <unistd.h>
 /*
 
-		KILL (sigal sending function)
+	KILL - sends a signal to a process, usually to terminate it
 
 		int	kill(pid_t pid, int sig);
 		
-		pid
+		PID 
 			> 0		- sig sent to pid
 			== 0	- sig sent to all in gpid
 			== -1	- sig sent to permissable processes except pid 1

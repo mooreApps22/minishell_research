@@ -6,9 +6,9 @@
 #include <fcntl.h>
 
 /*
-		LSTAT
+	LSTAT
 		
-			int	lstat(const char *restrict path, struct stat *restrict buf);
+		int	lstat(const char *restrict path, struct stat *restrict buf);
 
 			returns info in the for of a struct stat
 			
@@ -32,34 +32,33 @@
 		}
 */
 
+void	print_file_type(const struct stat *buf)
+{
+	if (S_ISREG(buf->st_mode))
+		printf("Regular file\n");	
+	else if (S_ISDIR(buf->st_mode))
+		printf("Directory\n");	
+	else if (S_ISLNK(buf->st_mode))
+		printf("Symbolic link\n");	
+	else
+		printf("Other\n");	
+}
+
+
 int	main(int ac, char **av)
 {
-	struct stat	*buf;
-
-	buf = malloc(sizeof(struct stat));
-	if (!buf)
+	struct stat	buf;
+	if (ac != 2)
 	{
-		perror("buf didn't malloc");
-		exit(EXIT_FAILURE);
+		printf("Usage: %s <pathway>\n", av[0]);
+		return (1);
 	}
-	if (lstat(av[1], buf) == 0)
+	if (lstat(av[1], &buf) == -1)
 	{
-		printf("Device ID:	%ld\n", buf->st_dev);
-		printf("Inode #:	%ld\n", buf->st_ino);
-		printf("Protection:	%u\n", buf->st_mode);
-		printf("Hard links:	%ld\n", buf->st_nlink);
-		printf("Owner User ID:	%u\n", buf->st_uid);
-		printf("Owner Group ID:	%u\n", buf->st_gid);
-		printf("Device ID(SF):	%ld\n", buf->st_rdev);
-		printf("Total Bytes:	%ld\n", buf->st_size);
-		printf("Blk size I/O:	%ld\n", buf->st_blksize);
-		printf("512B blks #:	%ld\n", buf->st_blocks);
-		printf("Last access:	%ld\n", buf->st_atime);
-		printf("Last mod:	%ld\n", buf->st_mtime);
-		printf("Last Stat Chg:	%ld\n", buf->st_ctime);
+		perror("lstat");
+		return (1);
 	}
-	else
-		printf("Error\n");
-	free(buf);
+	printf("File type: ");
+	print_file_type(&buf);
 	return (0);
 }
