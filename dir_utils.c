@@ -121,17 +121,23 @@ bool	search_dirs_for_cmd(char **paths, char *cmd)
 	return (false);
 }
 
-int	main(int ac, char **av)
+void	execute_abs_path(char *cmd)
 {
 	char			**paths;
 
 	paths = get_paths();
 	if (!paths)
-		return (1);
-	if (search_dirs_for_cmd(paths, av[1]))
-		printf("Found: You can exec %s\n", av[1]);
+		exit (1);
+	if (search_dirs_for_cmd(paths, cmd))
+		printf("Found: You can exec %s\n", cmd);
 	else
-		printf("%s: command not found\n", av[1]);
+		printf("%s: command not found\n", cmd);
 	free_all_paths(paths);
+}
+
+int	main(int ac, char **av)
+{
+	if (ac >= 2)
+		execute_abs_path(av[1]);
 	return (0);
 }

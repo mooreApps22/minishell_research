@@ -7,12 +7,18 @@
 /*
 	PERROR - print a system error message
 
-	void	perror(const char *s);
+		void	perror(const char *s);
 
-	prints a standard error message when a system call encounters an error
+		Prints a standard error message when a system call encounters an error
 
 	NOTE: try to open a file that doesn't exist to see perror work
 */
+
+void	handle_error(const char *msg)
+{
+	perror(msg);
+	exit(EXIT_FAILURE);
+}
 
 int	main(int ac, char **av)
 {
@@ -21,10 +27,7 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		if ((fd = open(av[1], O_RDONLY)) == -1)
-		{
-			perror("open");
-			exit(EXIT_FAILURE);
-		}
+			handle_error("open");
 		printf("%s was opened\n", av[1]);
 	}
 	close(fd);

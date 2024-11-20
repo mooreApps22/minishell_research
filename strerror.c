@@ -8,9 +8,9 @@
 /*
 	STRERROR - print a system error message
 
-	char	*strerror(int errnum);
+		char	*strerror(int errnum);
 
-	returns a pointer to string with error code selected by errnum
+		returns a pointer to string with error code selected by errnum
 
 	NOTE: try to open a file that doesn't exist to see strerror work
 */

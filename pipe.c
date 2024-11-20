@@ -6,7 +6,7 @@
 #include <sys/wait.h>
 
 /*
-		PIPE - creates a one way pipe with a write end and a read end
+	PIPE - creates a one way pipe with a write end and a read end
 
 		int	pipe(int pipefd[2]);
 
@@ -17,13 +17,13 @@
 
 		return 0 on success and -1 on failure (errno is set)
 
-		NOTE: there are three main methods for printing from a child process
-			
-			1) if you use printf() you must use a '\n' or the buffer will not be flushed
+	NOTE: there are three main methods for printing from a child process
+		
+		1) if you use printf() you must use a '\n' or the buffer will not be flushed
 
-			2) or you can you write() w/ STDOUT_FILENO
+		2) or you can you write() w/ STDOUT_FILENO
 
-			3) fflush()
+		3) fflush()
 */
 
 void	child_process(int *pipefd, char **av)
